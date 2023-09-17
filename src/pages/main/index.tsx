@@ -6,15 +6,6 @@ import styles from './index.module.scss'
 
 export const MainPage:FC = ()=>{
     const audio = document.querySelector('audio');
-    useEffect(()=>{
-        // setTimeout(() => {
-        //     audio?.play();
-        //     // audio?.setAttribute('muted','false')
-        // }, 100);
-        document.onclick = ()=>{
-            // audio?.play();
-        }
-    },[audio])
 
     return (
       <div className={styles.wrapper}>
@@ -25,7 +16,7 @@ export const MainPage:FC = ()=>{
           muted
           loop
         />
-        <audio src={process.env.PUBLIC_URL + "/main.mp3"} autoPlay></audio>
+        <audio src={process.env.PUBLIC_URL + "/main.mp3"}></audio>
         <div className={styles.pause} onClick={()=>audio?.pause()}>关闭声音</div>
         <div className={styles.menu}>
           <div>

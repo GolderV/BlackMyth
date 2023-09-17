@@ -1,0 +1,15 @@
+.system-tabs {
+  margin: 36px !important;
+  > .ant-tabs-nav {
+    .ant-tabs-tab-btn {
+      width: 100px;
+    }
+    .ant-tabs-tab + .ant-tabs-tab {
+      border-left: #666 1px solid !important;
+    }
+    .ant-tabs-tab {
+      margin: 12px 0 !important;
+      padding: 0 16px !important;
+    }
+  }
+}
