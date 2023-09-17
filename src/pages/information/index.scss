@@ -1,5 +1,12 @@
 .system-tabs {
   margin: 36px !important;
+  height: 100%;
+  .ant-tabs-content {
+    height: 100%;
+  }
+  .ant-tabs-tabpane {
+    height: 100%;
+  }
   > .ant-tabs-nav {
     .ant-tabs-tab-btn {
       width: 100px;

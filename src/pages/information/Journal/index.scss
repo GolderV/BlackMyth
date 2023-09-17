@@ -1,8 +1,15 @@
 .journal {
-  //   margin-top: 12px;
   margin-left: 120px;
+  height: 100%;
+  .top {
+    color: #ccc;
+    span {
+      margin-right: 12px;
+      font-size: 20px !important;
+    }
+  }
   .search {
-    width: 300px;
+    width: 180px;
     margin-bottom: 24px;
     background-color: transparent;
     color: #999;
@@ -18,10 +25,19 @@
   }
   .content {
     display: flex;
+    height: calc(100% - 140px);
   }
   .left {
+    height: 100%;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
     .ant-menu {
       background-color: transparent;
+    }
+    .ant-menu-sub {
+      margin-bottom: 48px;
     }
     .ant-menu-submenu-title,
     .ant-menu-item {
@@ -64,6 +80,13 @@
     color: #ccc;
     width: 300px;
     margin-left: 24px;
+    .info {
+      height: calc(100% - 35px);
+      overflow: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
     .label {
       font-size: 22px !important;
       color: #eaa400;
@@ -72,9 +95,13 @@
     }
     .poetry {
       white-space: pre-wrap;
-      margin-bottom: 20px;
+      margin-bottom: 48px;
       font-size: 16px;
       color: #999;
+    }
+    .desc {
+      white-space: pre-wrap;
+      margin-bottom: 48px;
     }
   }
   img {

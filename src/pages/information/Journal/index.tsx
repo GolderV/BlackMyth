@@ -50,7 +50,10 @@ export const Journal: React.FC = () => {
 
   return (
     <div className="journal">
-      <Input className="search" onChange={onSearch} value={searchKey} />
+      <div className="top">
+        <span>搜神匣</span>
+        <Input className="search" onChange={onSearch} value={searchKey} />
+      </div>
       <div className="title">影神图</div>
       <div className="content">
         <div className="left">
@@ -65,8 +68,10 @@ export const Journal: React.FC = () => {
           {currentSelected?.label && (
             <div className="label">{currentSelected?.label}</div>
           )}
-          <div className="poetry">{currentSelected?.info?.poetry}</div>
-          <div className="desc">{currentSelected?.info?.desc}</div>
+          <div className="info">
+            <div className="poetry">{currentSelected?.info?.poetry}</div>
+            <div className="desc">{currentSelected?.info?.desc}</div>
+          </div>
         </div>
         <img
           src={currentSelected?.info?.img}
