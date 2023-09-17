@@ -1,0 +1,58 @@
+.journal {
+  .title {
+    color: #ccc;
+    font-size: 22px !important;
+  }
+  .content {
+    display: flex;
+  }
+  .left {
+    .ant-menu-title-content {
+      color: #ccc !important;
+      font-size: 22px !important;
+    }
+    .ant-menu-submenu-active,
+    .ant-menu-submenu-open {
+      & {
+        .ant-menu-submenu-title {
+          background-color: #ccc !important;
+        }
+        > .ant-menu-submenu-title > .ant-menu-title-content {
+          color: #000 !important;
+          // background-color: #ccc;
+        }
+        .ant-menu-item-selected {
+          & > .ant-menu-title-content {
+            color: #000 !important;
+          }
+          background-color: #ccc;
+        }
+      }
+    }
+    .ant-menu-submenu-arrow {
+      color: #000 !important;
+    }
+  }
+  .right {
+    color: #ccc;
+    width: 300px;
+    margin-left: 24px;
+    .label {
+      font-size: 22px !important;
+      color: #eaa400;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 8px;
+    }
+    .poetry {
+      white-space: pre-wrap;
+      margin-bottom: 20px;
+      font-size: 16px;
+      color: #999;
+    }
+  }
+  img {
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+}

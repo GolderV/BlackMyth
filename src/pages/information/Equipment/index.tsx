@@ -1,8 +1,8 @@
 import { Tabs } from "antd";
 import React from "react";
-import { ARMOR_ITEM } from "../config";
 import "./index.scss";
 import CommonTable from "../CommonTable";
+import { ARMOR_ITEM } from "./config";
 
 interface Props {}
 

@@ -1,6 +1,7 @@
 import { TabsProps } from "antd";
 import { SettingsPage } from "../settings";
-import EquipmentComponent from "./component/EquipmentComponent";
+import EquipmentComponent from "./Equipment";
+import Journal from "./Journal";
 
 export const SYSTEM_TABS_ITEMS: TabsProps["items"] = [
   {
@@ -26,7 +27,7 @@ export const SYSTEM_TABS_ITEMS: TabsProps["items"] = [
   {
     key: "Journal",
     label: "游记",
-    // children:JournalComponent
+    children: <Journal />,
   },
   {
     key: "Settings",

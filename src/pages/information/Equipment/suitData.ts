@@ -1,4 +1,4 @@
-import { Level } from "../../../../const/type";
+import { Level } from "../../../const/type";
 import { EquipmentData } from "../CommonTable/type";
 
 // 套装数据

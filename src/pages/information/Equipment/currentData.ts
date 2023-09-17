@@ -1,4 +1,3 @@
-import { Level } from "../../../../const/type";
 import { EquipmentData } from "../CommonTable/type";
 import { BAIXISUIT } from "./suitData";
 

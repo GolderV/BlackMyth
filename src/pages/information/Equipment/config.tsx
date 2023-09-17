@@ -1,6 +1,5 @@
 import { TabsProps } from "antd";
-import FaceDetail from "./EquipmentComponent/FaceDetail";
-import { FACE_DATA } from "./EquipmentComponent/currentData";
+import { FACE_DATA } from "./currentData";
 
 // 防具类型
 export const ARMOR_ITEM = [
