@@ -1,4 +1,4 @@
-import { Level, Attribute } from "../../../../const/type";
+import { Level, Attribute } from "../../../const/type";
 
 export interface EquipmentData {
   key: string;

@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react";
-import { Level, Attribute } from "../../../../const/type";
+import { Level, Attribute } from "../../../const/type";
 import { EquipmentData } from "./type";
 import "./index.scss";
 
