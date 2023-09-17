@@ -6,7 +6,9 @@
     margin-bottom: 24px;
     background-color: transparent;
     color: #999;
-    &:hover {
+    border-color: #666;
+    &:hover,
+    &:focus {
       border-color: #ccc;
     }
   }
@@ -28,6 +30,9 @@
     .ant-menu-item {
       margin-left: 36px;
       width: 80%;
+      .ant-menu-title-content {
+        font-size: 20px !important;
+      }
     }
     .ant-menu-title-content {
       color: #ccc !important;
