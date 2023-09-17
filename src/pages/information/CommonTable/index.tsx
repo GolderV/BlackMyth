@@ -18,7 +18,6 @@ function CommonTable(props: Props) {
 
   const length = data.length;
   const fillList = length < 12 ? new Array(12 - length).fill(1) : [];
-  console.log(fillList);
   return (
     <div className="common-table">
       <div className="title">{title}</div>
@@ -31,12 +30,13 @@ function CommonTable(props: Props) {
       <div className="table">
         {data.map((e) => (
           <img
+            key={e.key}
             src={e.image}
             className={e.key === currentSelect ? "selected" : ""}
           />
         ))}
-        {fillList.map(() => (
-          <div className="fill" />
+        {fillList.map((_, i) => (
+          <div className="fill" key={i} />
         ))}
       </div>
     </div>

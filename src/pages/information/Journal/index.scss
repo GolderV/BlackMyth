@@ -1,4 +1,15 @@
 .journal {
+  //   margin-top: 12px;
+  margin-left: 120px;
+  .search {
+    width: 300px;
+    margin-bottom: 24px;
+    background-color: transparent;
+    color: #999;
+    &:hover {
+      border-color: #ccc;
+    }
+  }
   .title {
     color: #ccc;
     font-size: 22px !important;
@@ -7,6 +18,17 @@
     display: flex;
   }
   .left {
+    .ant-menu {
+      background-color: transparent;
+    }
+    .ant-menu-submenu-title,
+    .ant-menu-item {
+      background-color: #171717;
+    }
+    .ant-menu-item {
+      margin-left: 36px;
+      width: 80%;
+    }
     .ant-menu-title-content {
       color: #ccc !important;
       font-size: 22px !important;

@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 import type { MenuProps } from "antd";
-import { Menu } from "antd";
+import { Input, Menu } from "antd";
 import { DATA } from "./data";
 import "./index.scss";
 import { MonsterData } from "./type";
@@ -18,27 +18,46 @@ function getData(key?: string) {
   return res;
 }
 
+function isIncludes(item: MonsterData, keys: string[]) {
+  return keys.some((key) => JSON.stringify(item).includes(key));
+}
+
 export const Journal: React.FC = () => {
   const [selectedKey, setSelectedKey] = useState<string>();
   const currentSelected = useMemo(() => getData(selectedKey), [selectedKey]);
-  console.log(currentSelected);
+  const [searchKey, setSearchKey] = useState<string>();
+
+  const filterData = useMemo(() => {
+    if (!searchKey) return DATA;
+    const keys = searchKey.trim().split(" ");
+    return DATA.map((item) => {
+      const children = item.children.filter((child) => isIncludes(child, keys));
+      // return { ...item, children };
+      return children as any;
+    });
+  }, [searchKey]);
+
+  const onSearch: React.ChangeEventHandler<HTMLInputElement> = (e) => {
+    setSearchKey(e.target.value);
+  };
 
   return (
     <div className="journal">
+      <Input className="search" onChange={onSearch} value={searchKey} />
       <div className="title">影神图</div>
       <div className="content">
         <div className="left">
           <Menu
             style={{ width: 256 }}
-            defaultSelectedKeys={["1"]}
-            defaultOpenKeys={["sub1"]}
             mode="inline"
-            items={DATA}
+            items={filterData}
             onSelect={(e) => setSelectedKey(e.key)}
           />
         </div>
         <div className="right">
-          <div className="label">{currentSelected?.label}</div>
+          {currentSelected?.label && (
+            <div className="label">{currentSelected?.label}</div>
+          )}
           <div className="poetry">{currentSelected?.info?.poetry}</div>
           <div className="desc">{currentSelected?.info?.desc}</div>
         </div>
