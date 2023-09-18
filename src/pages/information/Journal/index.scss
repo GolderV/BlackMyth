@@ -33,48 +33,6 @@
     &::-webkit-scrollbar {
       display: none;
     }
-    .ant-menu {
-      background-color: transparent;
-    }
-    .ant-menu-sub {
-      margin-bottom: 48px;
-    }
-    .ant-menu-submenu-title,
-    .ant-menu-item {
-      background-color: #171717;
-    }
-    .ant-menu-item {
-      margin-left: 36px;
-      width: 80%;
-      .ant-menu-title-content {
-        font-size: 20px !important;
-      }
-    }
-    .ant-menu-title-content {
-      color: #ccc !important;
-      font-size: 22px !important;
-    }
-    .ant-menu-submenu-active,
-    .ant-menu-submenu-open {
-      & {
-        .ant-menu-submenu-title {
-          background-color: #ccc !important;
-        }
-        > .ant-menu-submenu-title > .ant-menu-title-content {
-          color: #000 !important;
-          // background-color: #ccc;
-        }
-        .ant-menu-item-selected {
-          & > .ant-menu-title-content {
-            color: #000 !important;
-          }
-          background-color: #ccc;
-        }
-      }
-    }
-    .ant-menu-submenu-arrow {
-      color: #000 !important;
-    }
   }
   .right {
     color: #ccc;

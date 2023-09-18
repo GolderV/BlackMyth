@@ -1,17 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.scss';
-import { BrowserRouter, Route,Routes } from 'react-router-dom';
-import { MainPage } from './pages/main';
-import { menu } from './pages/main/config';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.scss";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { MainPage } from "./pages/main";
+import { MENU } from "./pages/main/config";
 
 function App() {
   return (
     <BrowserRouter>
-      <div className='App'>
+      <div className="App">
         <Routes>
           <Route path="/" element={<MainPage />} />
-          {menu.map(item => <Route key={item.label} path={item.path} element={<item.component />} />)}
+          {MENU.map((item) => (
+            <Route
+              key={item.key}
+              path={item.path}
+              element={<item.component />}
+            />
+          ))}
         </Routes>
       </div>
     </BrowserRouter>

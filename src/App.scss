@@ -17,7 +17,6 @@
 }
 
 // 清除 antd tabs 默认样式
-// :global {
 .ant-tabs-nav::before {
   border: none !important;
 }
@@ -35,4 +34,59 @@
 .ant-tabs-tab-disabled .ant-tabs-tab-btn {
   color: #666 !important;
 }
-// }
+
+// 覆盖 antd menu 默认样式
+.ant-menu {
+  background-color: transparent;
+}
+.ant-menu-sub {
+  margin-bottom: 48px;
+}
+.ant-menu-submenu-title,
+.ant-menu-item {
+  background: linear-gradient(to right, #000000da, transparent);
+  & {
+    &:hover {
+      background: linear-gradient(to right, #ccc, transparent) !important;
+      > .ant-menu-title-content {
+        color: #000 !important;
+      }
+    }
+  }
+}
+.ant-menu-item {
+  margin-left: 36px;
+  width: 80%;
+  .ant-menu-title-content {
+    font-size: 20px !important;
+  }
+  &.ant-menu-item-only-child {
+    padding-left: 24px !important;
+    margin-left: 24px;
+  }
+}
+.ant-menu-title-content {
+  color: #ccc !important;
+  font-size: 22px !important;
+}
+.ant-menu-submenu-active,
+.ant-menu-submenu-open {
+  & {
+    .ant-menu-submenu-title {
+      background: linear-gradient(to right, #ccc, transparent) !important;
+    }
+    > .ant-menu-submenu-title > .ant-menu-title-content {
+      color: #000 !important;
+      // background-color: #ccc;
+    }
+    .ant-menu-item-selected {
+      & > .ant-menu-title-content {
+        color: #000 !important;
+      }
+      background: linear-gradient(to right, #ccc, transparent);
+    }
+  }
+}
+.ant-menu-submenu-arrow {
+  color: #000 !important;
+}
