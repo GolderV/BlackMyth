@@ -1,13 +1,20 @@
-import { Level } from "./type";
+import { Attribute, LevelEnum } from "./type";
 
-export const ArmorLevelLabelMap = {
-  [Level.Specials]: "特品",
-  [Level.Top]: "上品",
-  [Level.Good]: "良品",
+export const LevelLabelMap = {
+  [LevelEnum.Specials]: "特品",
+  [LevelEnum.Top]: "上品",
+  [LevelEnum.Good]: "良品",
 };
 
-export const ArmorLevelColorMap = {
-  [Level.Specials]: "#201154",
-  [Level.Top]: "#144471",
-  [Level.Good]: "#0c4339",
+export const LevelColorMap = {
+  [LevelEnum.Specials]: "#201154",
+  [LevelEnum.Top]: "#144471",
+  [LevelEnum.Good]: "#0c4339",
+};
+
+export const AttributeLabelMap: Record<keyof Attribute, string> = {
+  defense: "防御力",
+  attack: "攻击力",
+  health: "生命值",
+  speed: "速度",
 };

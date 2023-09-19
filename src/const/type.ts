@@ -1,5 +1,5 @@
 /** 装备等级 */
-export enum Level {
+export enum LevelEnum {
   Specials,
   Top,
   Good,
@@ -13,4 +13,6 @@ export interface Attribute {
   attack?: number;
   /** 生命值 */
   health?: number;
+  /** 速度 */
+  speed?: number;
 }

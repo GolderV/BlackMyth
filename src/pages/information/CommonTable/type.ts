@@ -1,10 +1,10 @@
-import { Level, Attribute } from "../../../const/type";
+import { LevelEnum, Attribute } from "../../../const/type";
 
 export interface EquipmentData {
   key: string;
   label: string;
   image?: string;
-  level?: Level;
+  level: LevelEnum;
   attribute?: Attribute;
   specialEffect?: EquipmentSpecialEffect;
   extraInfo?: string;

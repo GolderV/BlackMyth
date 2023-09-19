@@ -1,4 +1,4 @@
-import { Level } from "../../../const/type";
+import { LevelEnum } from "../../../const/type";
 import { EquipmentData } from "../CommonTable/type";
 
 // 套装数据
@@ -7,7 +7,7 @@ export const BAIXISUIT: Record<string, EquipmentData> = {
     key: "baixinuomian",
     label: "百戏傩面",
     image: "/suit/baixi/baixinuomian.png",
-    level: Level.Top,
+    level: LevelEnum.Top,
     attribute: {
       defense: 20,
     },

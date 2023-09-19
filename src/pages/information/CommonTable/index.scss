@@ -1,21 +1,133 @@
 .common-table {
-  .title {
-    background-color: rgb(90, 13, 13);
-    margin-bottom: 12px;
-    color: #ccc;
-    padding: 0 4px;
-  }
-  .table {
-    display: flex;
-    flex-wrap: wrap;
-    > * {
-      width: 160px;
-      height: 120px;
-      margin-right: 8px;
-      margin-bottom: 8px;
+  display: flex;
+  height: 100%;
+  .left {
+    width: 400px;
+    .title {
+      background: linear-gradient(
+        to right,
+        rgb(90, 13, 13),
+        rgb(90, 13, 13),
+        // rgb(90, 13, 13),
+        transparent
+      );
+      margin-bottom: 12px;
+      color: #ccc;
+      padding: 0 4px;
     }
-    .fill {
-      background-color: #ccc;
+    .current {
+      color: #ccc;
+      display: flex;
+      align-items: flex-end;
+      > img {
+        width: 120x;
+        height: 90px;
+      }
+      > div {
+        margin-left: 12px;
+        margin-bottom: 8px;
+      }
+    }
+    .divider {
+      width: 377px;
+      height: 1px;
+      background: #ccc;
+      margin: 12px 0;
+    }
+    .table {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      overflow-y: scroll;
+      height: calc(100% - 150px);
+      max-height: 430px;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      > * {
+        width: 120px;
+        height: 90px;
+        margin-right: 8px;
+        margin-bottom: 8px;
+        transition: all 0.2s;
+        cursor: pointer;
+      }
+      .table-item {
+        position: relative;
+        img {
+          width: 100%;
+        }
+        &:hover,
+        &.selected {
+          transform: scale(1.05);
+        }
+        &.selected::after {
+          position: absolute;
+          content: "*";
+          left: 4px;
+          top: -4px;
+          border-radius: 2px;
+          width: 24px;
+          height: 32px;
+          background-color: #fff;
+          text-align: center;
+          font-weight: bold;
+          line-height: 40px;
+          font-size: 24px;
+        }
+      }
+      .fill {
+        background-color: #ccc;
+      }
+    }
+  }
+  .right {
+    width: 400px;
+    display: none;
+    &.show {
+      display: block;
+    }
+    .level {
+      font-size: 16px !important;
+      color: #ccc;
+      padding: 0 12px;
+      display: flex;
+      justify-content: space-between;
+      &.selected {
+        background: linear-gradient(to right, #666, #ccc);
+        > span + span {
+          color: #000;
+        }
+      }
+    }
+    .info {
+      min-height: 160px;
+      .detail-label {
+        font-size: 36px !important;
+        color: #fff;
+        margin-top: 12px;
+        margin-left: 24px;
+      }
+      .attribute > div {
+        background: #cccccc2d;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 24px;
+        color: #fff;
+        .attribute-label {
+          display: flex;
+          align-items: center;
+          .icon {
+            width: 16px;
+            margin-right: 8px;
+          }
+        }
+      }
+    }
+    .extra-info {
+      padding: 12px 24px;
+      background-color: #161616e3;
+      color: #ccc;
     }
   }
 }
