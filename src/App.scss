@@ -44,10 +44,22 @@
 }
 .ant-menu-submenu-title,
 .ant-menu-item {
-  background: linear-gradient(to right, #000000da, transparent);
+  background: linear-gradient(
+    to right,
+    #000000da,
+    #000000da,
+    #000000da,
+    transparent
+  );
   & {
     &:hover {
-      background: linear-gradient(to right, #ccc, transparent) !important;
+      background: linear-gradient(
+        to right,
+        #ccc,
+        #ccc,
+        #ccc,
+        transparent
+      ) !important;
       > .ant-menu-title-content {
         color: #000 !important;
       }
@@ -73,7 +85,13 @@
 .ant-menu-submenu-open {
   & {
     .ant-menu-submenu-title {
-      background: linear-gradient(to right, #ccc, transparent) !important;
+      background: linear-gradient(
+        to right,
+        #ccc,
+        #ccc,
+        #ccc,
+        transparent
+      ) !important;
     }
     > .ant-menu-submenu-title > .ant-menu-title-content {
       color: #000 !important;
@@ -83,7 +101,7 @@
       & > .ant-menu-title-content {
         color: #000 !important;
       }
-      background: linear-gradient(to right, #ccc, transparent);
+      background: linear-gradient(to right, #ccc, #ccc, #ccc, transparent);
     }
   }
 }
