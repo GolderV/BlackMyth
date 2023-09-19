@@ -18,6 +18,7 @@ export const InformationPage: FC = () => {
         className="system-tabs"
         items={SYSTEM_TABS_ITEMS}
         indicatorSize={0}
+        animated
         defaultActiveKey="Equipment"
         onChange={(e) => setCurrentSelect(e)}
       ></Tabs>

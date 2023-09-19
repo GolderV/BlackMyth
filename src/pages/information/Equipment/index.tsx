@@ -52,6 +52,7 @@ function EquipmentComponent(props: Props) {
         className="armor-tabs"
         indicatorSize={0}
         defaultActiveKey="Equipment"
+        animated
       >
         {ARMOR_ITEM?.map((e) => {
           return (
