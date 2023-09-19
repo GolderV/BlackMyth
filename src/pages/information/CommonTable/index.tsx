@@ -25,7 +25,7 @@ function CommonTable(props: Props) {
   const length = data.length;
   const fillList = length < 12 ? new Array(12 - length).fill(1) : [];
 
-  const attribute = Object.entries(currentSelect?.attribute || {}).map(
+  const attribute = Object.entries(hoveredItem?.attribute || {}).map(
     ([key, value]) => {
       return (
         <div>

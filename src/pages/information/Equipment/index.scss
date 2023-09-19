@@ -10,3 +10,58 @@
     padding: 0 !important;
   }
 }
+.wukong {
+  position: fixed;
+  right: 200px;
+  bottom: 0;
+  height: 100vh;
+}
+
+.user-info {
+  position: fixed;
+  right: 50px;
+  top: 150px;
+  color: #fff;
+  .top {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #666;
+    position: relative;
+    > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      border-radius: 50%;
+      background-color: #666;
+      width: 60px;
+      height: 60px;
+      position: absolute;
+    }
+    .health {
+      top: -20px;
+      left: 20px;
+    }
+    .speed {
+      top: 50px;
+      left: -25px;
+      background-color: rgb(48, 68, 100);
+    }
+    .lightning {
+      top: 50px;
+      left: 65px;
+      background-color: rgb(97, 85, 45);
+    }
+    img {
+      width: 16px;
+    }
+  }
+  .list {
+    margin-top: 24px;
+    > div {
+      font-size: 16px !important;
+      text-align: center;
+    }
+  }
+}
