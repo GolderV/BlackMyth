@@ -3,11 +3,11 @@ import React from "react";
 import "./index.scss";
 import CommonTable from "../CommonTable";
 import { ARMOR_ITEM } from "./config";
+import EquipmentDetail from "./EquipmentDetail";
 interface Props {}
 
 function EquipmentComponent(props: Props) {
   const {} = props;
-
   return (
     <>
       <img
@@ -57,7 +57,11 @@ function EquipmentComponent(props: Props) {
         {ARMOR_ITEM?.map((e) => {
           return (
             <Tabs.TabPane tab={e.label} key={e.key}>
-              <CommonTable title={e.label} data={e.data} />
+              <CommonTable
+                title={e.label}
+                data={e.data}
+                DetailComp={EquipmentDetail}
+              />
             </Tabs.TabPane>
           );
         })}

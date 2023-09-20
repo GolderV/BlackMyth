@@ -1,13 +1,34 @@
-import { LevelEnum, Attribute } from "../../../const/type";
+import {
+  EquipmentLevelEnum,
+  EquipmentAttribute,
+  MaterialLevelEnum,
+} from "../../../const/type";
 
-export interface EquipmentData {
+interface BaseData {
   key: string;
   label: string;
   image?: string;
-  level: LevelEnum;
-  attribute?: Attribute;
+  /** 评语 */
+  comments?: string;
+}
+
+/** 装备数据 */
+export interface EquipmentData extends BaseData {
+  /** 装备等级 */
+  level: EquipmentLevelEnum;
+  /** 装备属性加成 */
+  attribute?: EquipmentAttribute;
+  /** 套装效果 */
   specialEffect?: EquipmentSpecialEffect;
-  extraInfo?: string;
+}
+
+/** 物品数据 */
+export interface MaterialData extends BaseData {
+  level: MaterialLevelEnum;
+  /** 持有 */
+  hold: number;
+  /** 库存 */
+  inventory: number;
 }
 
 /** 装备特殊效果 */

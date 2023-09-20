@@ -1,48 +1,31 @@
 import React, { useMemo, useState } from "react";
-import { LevelEnum, Attribute } from "../../../const/type";
-import { EquipmentData } from "./type";
+import { EquipmentLevelEnum, EquipmentAttribute } from "../../../const/type";
+import { EquipmentData, MaterialData } from "./type";
 import "./index.scss";
 import {
   AttributeLabelMap,
-  LevelColorMap,
-  LevelLabelMap,
+  EquipmentLevelColorMap,
+  EquipmentLevelLabelMap,
 } from "../../../const/const";
 import classnames from "classnames";
 import { Divider } from "antd";
 import BgMix from "../../../components/BgMix";
 
-interface Props {
+type Data = EquipmentData | MaterialData;
+interface IProps {
   title: string;
-  data: EquipmentData[];
+  data: EquipmentData[] | MaterialData[];
+  DetailComp: React.ComponentType<any>;
 }
 
-function CommonTable(props: Props) {
-  const { title, data } = props;
-  const [currentSelect, setCurrentSelect] = useState<EquipmentData>();
+function CommonTable(props: IProps) {
+  const { title, data, DetailComp } = props;
+  const [currentSelect, setCurrentSelect] = useState<Data>();
 
-  const [hoveredItem, setHoveredItem] = useState<EquipmentData>();
+  const [hoveredItem, setHoveredItem] = useState<Data>();
 
   const length = data.length;
   const fillList = length < 12 ? new Array(12 - length).fill(1) : [];
-
-  const attribute = Object.entries(hoveredItem?.attribute || {}).map(
-    ([key, value]) => {
-      return (
-        <div>
-          <div className="attribute-label">
-            <img
-              src={process.env.PUBLIC_URL + "/attribute/" + key + ".svg"}
-              alt={key}
-              className="icon"
-            />
-            <span>{AttributeLabelMap[key as keyof Attribute]}</span>
-          </div>
-          <div className="number">{value}</div>
-        </div>
-      );
-    }
-  );
-
   const hoveredSelected = hoveredItem?.key === currentSelect?.key;
 
   return (
@@ -59,13 +42,13 @@ function CommonTable(props: Props) {
         <div className="table">
           {data.map((e) => (
             <div
+              key={e.key}
               className={classnames(
                 "table-item",
                 e.key === currentSelect?.key && "selected"
               )}
             >
               <img
-                key={e.key}
                 src={e.image}
                 onClick={() => setCurrentSelect(e)}
                 onMouseEnter={() => setHoveredItem(e)}
@@ -79,21 +62,7 @@ function CommonTable(props: Props) {
         </div>
       </div>
       <div className={classnames("right", hoveredItem && "show")}>
-        <BgMix
-          className="info"
-          style={{
-            backgroundColor:
-              LevelColorMap[hoveredItem?.level || LevelEnum.Good],
-          }}
-        >
-          <div className={classnames("level", hoveredSelected && "selected")}>
-            <span>{LevelLabelMap[hoveredItem?.level || LevelEnum.Good]}</span>
-            {hoveredSelected && <span>当前穿戴</span>}
-          </div>
-          <div className="detail-label">{hoveredItem?.label}</div>
-          <div className="attribute">{attribute}</div>
-        </BgMix>
-        <BgMix className="extra-info">{hoveredItem?.extraInfo}</BgMix>
+        {<DetailComp data={hoveredItem} isSelected={hoveredSelected} />}
       </div>
     </div>
   );

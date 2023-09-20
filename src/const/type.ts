@@ -1,12 +1,12 @@
 /** 装备等级 */
-export enum LevelEnum {
+export enum EquipmentLevelEnum {
   Specials,
   Top,
   Good,
 }
 
-/** 属性加成 */
-export interface Attribute {
+/** 装备属性加成 */
+export interface EquipmentAttribute {
   /** 防御力 */
   defense?: number;
   /** 攻击力 */
@@ -15,4 +15,11 @@ export interface Attribute {
   health?: number;
   /** 速度 */
   speed?: number;
+}
+
+/** 物品等级 */
+export enum MaterialLevelEnum {
+  Specials,
+  Top,
+  Good,
 }
