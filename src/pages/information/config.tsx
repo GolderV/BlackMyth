@@ -3,7 +3,7 @@ import { SettingsPage } from "../settings";
 import EquipmentComponent from "./Equipment";
 import Journal from "./Journal";
 
-export const SYSTEM_TABS_ITEMS: TabsProps["items"] = [
+export const SYSTEM_TABS_ITEMS = [
   {
     key: "Abilities",
     label: "本事",
@@ -16,7 +16,7 @@ export const SYSTEM_TABS_ITEMS: TabsProps["items"] = [
   },
   {
     key: "Equipment",
-    label: "披挂",
+    label: "披褂",
     children: <EquipmentComponent />,
   },
   {

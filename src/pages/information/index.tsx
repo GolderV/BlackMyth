@@ -5,7 +5,7 @@ import "./index.scss";
 import classnames from "classnames";
 
 export const InformationPage: FC = () => {
-  const [currentSelect, setCurrentSelect] = useState<string>();
+  const [currentSelect, setCurrentSelect] = useState<string>("Equipment");
   return (
     <div
       className={classnames(
@@ -14,6 +14,9 @@ export const InformationPage: FC = () => {
         currentSelect === "Equipment" && "equipment"
       )}
     >
+      <div className="left-label">
+        {SYSTEM_TABS_ITEMS?.find((e) => e.key === currentSelect)?.label}
+      </div>
       <Tabs
         className="system-tabs"
         items={SYSTEM_TABS_ITEMS}

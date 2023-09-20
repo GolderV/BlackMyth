@@ -36,6 +36,9 @@
     }
     .table {
       padding-top: 12px;
+      padding-left: 12px;
+      position: relative;
+      left: -12px;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
