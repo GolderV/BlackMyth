@@ -10,6 +10,7 @@
     padding: 0 !important;
   }
   .ant-tabs-nav {
+    margin-bottom: 4px;
     > .ant-tabs-nav-wrap > .ant-tabs-nav-list {
       &::before {
         content: "z";
