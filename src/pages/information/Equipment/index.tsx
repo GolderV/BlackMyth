@@ -1,9 +1,6 @@
-import { Tabs } from "antd";
-import React from "react";
 import "./index.scss";
-import CommonTable from "../CommonTable";
-import { ARMOR_ITEM } from "./config";
 import EquipmentDetail from "./EquipmentDetail";
+import CommonTabs from "../CommonTabs";
 interface Props {}
 
 function EquipmentComponent(props: Props) {
@@ -48,24 +45,7 @@ function EquipmentComponent(props: Props) {
           <div>魔抗 0%</div>
         </div>
       </div>
-      <Tabs
-        className="armor-tabs"
-        indicatorSize={0}
-        defaultActiveKey="Equipment"
-        animated
-      >
-        {ARMOR_ITEM?.map((e) => {
-          return (
-            <Tabs.TabPane tab={e.label} key={e.key}>
-              <CommonTable
-                title={e.label}
-                data={e.data}
-                DetailComp={EquipmentDetail}
-              />
-            </Tabs.TabPane>
-          );
-        })}
-      </Tabs>
+      <CommonTabs DetailComp={EquipmentDetail} />
     </>
   );
 }

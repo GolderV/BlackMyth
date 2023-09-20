@@ -1,0 +1,33 @@
+.common-tabs {
+  margin-top: 40px;
+  margin-left: 120px;
+  height: calc(100% - 100px);
+  .ant-tabs-tab-btn {
+    width: 70px;
+  }
+  .ant-tabs-tab {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .ant-tabs-nav {
+    margin-bottom: 4px;
+    > .ant-tabs-nav-wrap > .ant-tabs-nav-list {
+      &::before {
+        content: "z";
+        background-color: #ccc;
+        padding: 0 10px;
+        margin: 12px 0;
+        margin-right: 16px;
+        border-radius: 6px;
+      }
+      &::after {
+        content: "c";
+        background-color: #ccc;
+        padding: 0 10px;
+        margin: 12px 0;
+        margin-left: 16px;
+        border-radius: 6px;
+      }
+    }
+  }
+}
