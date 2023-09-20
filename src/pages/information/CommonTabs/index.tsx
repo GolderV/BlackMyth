@@ -1,15 +1,16 @@
 import { Tabs } from "antd";
 import React from "react";
 import CommonTable from "../CommonTable";
-import { ARMOR_ITEM } from "../Equipment/config";
 import "./index.scss";
+import { TabItems } from "../type";
 
 interface Props {
   DetailComp: React.ComponentType<any>;
+  tabItems: TabItems[];
 }
 
 function CommonTabs(props: Props) {
-  const { DetailComp } = props;
+  const { tabItems, DetailComp } = props;
 
   return (
     <Tabs
@@ -18,7 +19,7 @@ function CommonTabs(props: Props) {
       defaultActiveKey="Equipment"
       animated
     >
-      {ARMOR_ITEM?.map((e) => {
+      {tabItems?.map((e) => {
         return (
           <Tabs.TabPane tab={e.label} key={e.key}>
             <CommonTable

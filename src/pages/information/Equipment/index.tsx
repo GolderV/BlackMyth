@@ -1,9 +1,10 @@
 import "./index.scss";
 import EquipmentDetail from "./EquipmentDetail";
 import CommonTabs from "../CommonTabs";
+import { ARMOR_ITEM } from "./config";
 interface Props {}
 
-function EquipmentComponent(props: Props) {
+function Equipment(props: Props) {
   const {} = props;
   return (
     <>
@@ -45,9 +46,9 @@ function EquipmentComponent(props: Props) {
           <div>魔抗 0%</div>
         </div>
       </div>
-      <CommonTabs DetailComp={EquipmentDetail} />
+      <CommonTabs tabItems={ARMOR_ITEM} DetailComp={EquipmentDetail} />
     </>
   );
 }
 
-export default EquipmentComponent;
+export default Equipment;

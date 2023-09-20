@@ -1,9 +1,10 @@
 import { TabsProps } from "antd";
 import { SettingsPage } from "../settings";
-import EquipmentComponent from "./Equipment";
+import Equipment from "./Equipment";
 import Journal from "./Journal";
+import Backpack from "./Backpack";
 
-export const SYSTEM_TABS_ITEMS = [
+export const SYSTEM_TABS_ITEMS: TabsProps["items"] = [
   {
     key: "Abilities",
     label: "本事",
@@ -17,12 +18,12 @@ export const SYSTEM_TABS_ITEMS = [
   {
     key: "Equipment",
     label: "披褂",
-    children: <EquipmentComponent />,
+    children: <Equipment />,
   },
   {
     key: "Backpack",
     label: "行囊",
-    // children:BackpackComponent
+    children: <Backpack />,
   },
   {
     key: "Journal",

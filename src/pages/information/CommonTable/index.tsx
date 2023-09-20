@@ -1,15 +1,7 @@
 import React, { useMemo, useState } from "react";
-import { EquipmentLevelEnum, EquipmentAttribute } from "../../../const/type";
 import { EquipmentData, MaterialData } from "./type";
 import "./index.scss";
-import {
-  AttributeLabelMap,
-  EquipmentLevelColorMap,
-  EquipmentLevelLabelMap,
-} from "../../../const/const";
 import classnames from "classnames";
-import { Divider } from "antd";
-import BgMix from "../../../components/BgMix";
 
 type Data = EquipmentData | MaterialData;
 interface IProps {
