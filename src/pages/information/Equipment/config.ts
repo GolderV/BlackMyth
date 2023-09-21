@@ -1,8 +1,7 @@
-import { TabsProps } from "antd";
 import { FACE_DATA } from "./currentData";
 
 // 防具类型
-export const ARMOR_ITEM = [
+export const EQUIPMENT_ITEM = [
   {
     key: "face",
     label: "头冠",

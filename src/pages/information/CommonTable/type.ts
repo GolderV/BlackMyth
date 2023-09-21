@@ -28,7 +28,9 @@ export interface MaterialData extends BaseData {
   /** 持有 */
   hold: number;
   /** 库存 */
-  inventory: number;
+  inStorage: number;
+  /** 效果 */
+  effect?: string;
 }
 
 /** 装备特殊效果 */

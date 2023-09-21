@@ -26,6 +26,7 @@ function CommonTabs(props: Props) {
               title={e.label}
               data={e.data}
               DetailComp={DetailComp}
+              isNeedCurrent={e.key === "Equipment"}
             />
           </Tabs.TabPane>
         );

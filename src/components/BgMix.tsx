@@ -1,6 +1,6 @@
 import classnames from "classnames";
-import React, { ComponentProps } from "react";
-import styles from "./BgMix.module.scss";
+import { ComponentProps } from "react";
+import styles from "./styles.module.scss";
 
 interface Props extends ComponentProps<any> {}
 

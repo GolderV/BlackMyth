@@ -16,7 +16,7 @@ export const KING_DATA = [];
 export const LEADER_DATA = [];
 
 /** 先锋数据 */
-export const VANGUARD_DATA = [];
+export const RINGLEADER_DATA = [];
 
 /** 小妖数据 */
 export const GOBLIN_DATA: MonsterData[] = [
@@ -162,9 +162,9 @@ export const DATA = [
     disabled: true,
   },
   {
-    label: "先锋",
-    key: "Vanguard",
-    children: VANGUARD_DATA,
+    label: "头目",
+    key: "Ringleader",
+    children: RINGLEADER_DATA,
     disabled: true,
   },
   {

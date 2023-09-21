@@ -8,10 +8,11 @@ interface IProps {
   title: string;
   data: EquipmentData[] | MaterialData[];
   DetailComp: React.ComponentType<any>;
+  isNeedCurrent?: boolean;
 }
 
 function CommonTable(props: IProps) {
-  const { title, data, DetailComp } = props;
+  const { title, data, DetailComp, isNeedCurrent = false } = props;
   const [currentSelect, setCurrentSelect] = useState<Data>();
 
   const [hoveredItem, setHoveredItem] = useState<Data>();
@@ -24,14 +25,17 @@ function CommonTable(props: IProps) {
     <div className="common-table">
       <div className="left">
         <div className="title">{title}</div>
-        {currentSelect && (
+        {currentSelect && isNeedCurrent && (
           <div className="current">
             <img src={currentSelect?.image} alt={currentSelect?.key} />
             <div>当前穿戴</div>
           </div>
         )}
         <div className="divider"></div>
-        <div className="table">
+        <div
+          className="table"
+          onMouseLeave={() => setHoveredItem(currentSelect)}
+        >
           {data.map((e) => (
             <div
               key={e.key}
@@ -44,7 +48,6 @@ function CommonTable(props: IProps) {
                 src={e.image}
                 onClick={() => setCurrentSelect(e)}
                 onMouseEnter={() => setHoveredItem(e)}
-                onMouseLeave={() => setHoveredItem(currentSelect)}
               />
             </div>
           ))}
