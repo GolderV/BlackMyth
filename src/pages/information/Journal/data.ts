@@ -118,7 +118,12 @@ export const GOBLIN_DATA: MonsterData[] = [
   },
   {
     label: "骨灵精",
-    key: "glj",
+    key: "gulingjing",
+    info: {
+      poetry: "垄头卧白骨，皮肉俱枯桑。\n游迷忘姓氏，何处是故乡?",
+      desc: "黄风冷大风不止,朝夕吹刮,坟冢被神风摧毁，尸骨裸露在外,此乃常事。\n\n这日,有个外来的商人,身负要事，急需穿过山岭。乡民们都说岭中妖魔横行，凶险万分,没人愿意给他带路。商人只好独自过山,才走了半日，就精疲力竭,颓丧地坐在道旁歌脚。",
+      img: "/journal/gulingjing.jpg",
+    },
   },
   {
     label: "骨悚然",
