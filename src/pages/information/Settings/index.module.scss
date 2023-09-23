@@ -16,6 +16,12 @@
     .ant-tabs-tab-active > .ant-tabs-tab-btn {
       background: linear-gradient(to right, #ccc, transparent);
     }
+    .ant-tabs-left
+      > .ant-tabs-content-holder
+      > .ant-tabs-content
+      > .ant-tabs-tabpane {
+      padding: 0 60px;
+    }
   }
 }
 
