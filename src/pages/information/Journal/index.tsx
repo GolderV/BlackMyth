@@ -32,17 +32,14 @@ export const Journal: React.FC = () => {
     const keys = searchKey.trim().split(" ");
     return DATA.map((item) => {
       const children = item.children.filter((child) => {
-        console.log(isIncludes(child, keys));
         return isIncludes(child, keys);
       });
-      console.log(children);
       // return { ...item, children };
       return children as any;
     })
       .filter((item) => item.length)
       .flat();
   }, [searchKey]);
-  console.log(filterData);
 
   const onSearch: React.ChangeEventHandler<HTMLInputElement> = (e) => {
     setSearchKey(e.target.value);

@@ -7,13 +7,7 @@ import classnames from "classnames";
 export const InformationPage: FC = () => {
   const [currentSelect, setCurrentSelect] = useState<string>("Equipment");
   return (
-    <div
-      className={classnames(
-        "wrapper",
-        "infopage",
-        currentSelect === "Equipment" && "equipment"
-      )}
-    >
+    <div className={classnames("wrapper", "infopage", currentSelect)}>
       <div className="left-label">
         {SYSTEM_TABS_ITEMS?.find((e) => e.key === currentSelect)?.label}
       </div>

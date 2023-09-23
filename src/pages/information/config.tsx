@@ -3,6 +3,7 @@ import { SettingsPage } from "../settings";
 import Equipment from "./Equipment";
 import Journal from "./Journal";
 import Backpack from "./Backpack";
+import Settings from "./Settings";
 
 export const SYSTEM_TABS_ITEMS: TabsProps["items"] = [
   {
@@ -33,7 +34,7 @@ export const SYSTEM_TABS_ITEMS: TabsProps["items"] = [
   {
     key: "Settings",
     label: "设置",
-    // children:SettingsPage
+    children: <Settings />,
   },
 ];
 

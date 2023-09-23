@@ -1,11 +1,10 @@
 .infopage {
-  background-color: #131313;
-  &.equipment {
-    // background-image: url("../../../public/infobg.png");
-    // background-color: #000000b3;
-    // background-blend-mode: multiply;
-    // background-size: 100%;
-  }
+  background-image: radial-gradient(
+    circle at 0px 20px,
+    #131313 0%,
+    #000 30%,
+    #000 100%
+  );
   .left-label {
     position: fixed;
     left: -15px;

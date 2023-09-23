@@ -34,6 +34,9 @@
 .ant-tabs-tab-disabled .ant-tabs-tab-btn {
   color: #666 !important;
 }
+.ant-tabs-left > .ant-tabs-content-holder {
+  border-left: none !important;
+}
 
 // 覆盖 antd menu 默认样式
 .ant-menu {
