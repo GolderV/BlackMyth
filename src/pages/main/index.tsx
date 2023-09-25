@@ -1,4 +1,4 @@
-import { FC, useEffect } from "react";
+import { FC, useEffect, useMemo, useState } from "react";
 import { MENU } from "./config";
 import { Link, Route, Routes } from "react-router-dom";
 import styles from "./index.module.scss";
@@ -6,10 +6,14 @@ import { Menu } from "antd";
 // import video from '/background.mp4';
 
 export const MainPage: FC = () => {
-  const audio = document.querySelector("audio");
+  const [isClicked, setIsClicked] = useState(false);
+  const onPlay = () => {
+    document.querySelector("audio")?.play();
+    setIsClicked(true);
+  };
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} onClick={onPlay} onKeyDown={onPlay}>
       <video
         className={styles["background-video"]}
         src={process.env.PUBLIC_URL + "/background.mp4"}
@@ -17,13 +21,23 @@ export const MainPage: FC = () => {
         muted
         loop
       />
-      <audio src={process.env.PUBLIC_URL + "/main.mp3"}></audio>
-      <div className={styles.pause} onClick={() => audio?.pause()}>
+      <audio src={process.env.PUBLIC_URL + "/main.mp3"} autoPlay></audio>
+      <div
+        className={styles.pause}
+        onClick={() => document.querySelector("audio")?.pause()}
+      >
         关闭声音
       </div>
-      <div className={styles.menu}>
-        <Menu items={MENU} />
-      </div>
+      {!isClicked ? (
+        <div className={styles.tips}>
+          <img src={process.env.PUBLIC_URL + "./titleWhite.png"} alt="title" />
+          <div>按下任意按键开始游戏</div>
+        </div>
+      ) : (
+        <div className={styles.menu}>
+          <Menu items={MENU} />
+        </div>
+      )}
     </div>
   );
 };

@@ -25,6 +25,7 @@ function NewGame(props: Props) {
       className: styles["new-game-modal"],
       content: "确定前往该关卡吗",
       maskClosable: true,
+      autoFocusButton: null,
       okType: "default",
       okText: "确定",
       cancelText: "取消",

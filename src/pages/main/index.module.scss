@@ -28,4 +28,36 @@
     color: white;
     cursor: pointer;
   }
+  .tips {
+    position: absolute;
+    left: 50%;
+    bottom: 120px;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: default;
+    > img {
+      width: 150px;
+      margin-bottom: 24px;
+    }
+    > div {
+      animation-duration: 2.5s;
+      animation-name: opacityCase;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      color: #ccc;
+      font-size: 28px !important;
+    }
+  }
+}
+
+@keyframes opacityCase {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }
