@@ -4,6 +4,7 @@ import "./App.scss";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { MainPage } from "./pages/main";
 import { MENU } from "./pages/main/config";
+import NewGame from "./pages/new";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<MainPage />} />
+          <Route path="/game/new" element={<NewGame />} />
           {MENU.map((item) => (
             <Route
               key={item.key}

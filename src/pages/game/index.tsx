@@ -14,6 +14,7 @@ function formatDuring(mss: number) {
 export const GamePage: FC = () => {
   const [progress, setProgress] = useState(0);
   const [countdown, setCountdown] = useState(DATE - Date.now());
+  const [clickCount, setClickCount] = useState(0);
 
   useEffect(() => {
     const timer1 = setInterval(() => {
@@ -40,6 +41,12 @@ export const GamePage: FC = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (clickCount < 5) return;
+    setClickCount(0);
+    window.location.href += "/new";
+  }, [clickCount]);
+
   const progressComp = progress < 100 && (
     <div className="progress-wrapper">
       <div className="progress">
@@ -58,7 +65,8 @@ export const GamePage: FC = () => {
   );
 
   return (
-    <div className="game-page">
+    <div className="game-page" onClick={() => setClickCount(clickCount + 1)}>
+      <audio src={process.env.PUBLIC_URL + "/oldMonkey.mp3"} autoPlay></audio>
       <div className="shadow" />
       <div className="title">
         <img
@@ -71,7 +79,7 @@ export const GamePage: FC = () => {
       </div>
       <img
         className="bg"
-        src={process.env.PUBLIC_URL + "./gamebg.png"}
+        src={process.env.PUBLIC_URL + "/background/game.png"}
         alt="老猴子"
       />
       {progressComp || countdownComp}
