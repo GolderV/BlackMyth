@@ -3,6 +3,7 @@ import styles from "./index.module.scss";
 import { Spells, SpellsTypeEnum } from "./type";
 import { SPELLS_ITEMS } from "./data";
 import classnames from "classnames";
+import BgMix from "../../../components/BgMix";
 
 const TypeMap = {
   [SpellsTypeEnum.Active]: "主动法术",
@@ -58,7 +59,9 @@ function SpellsComp() {
             </div>
             <div className={styles.type}>{TypeMap[hoverItem.type]}</div>
           </div>
-          <div className={styles.desc}>{hoverItem.description}</div>
+          <BgMix className={styles.desc}>
+            <div>{hoverItem.description}</div>
+          </BgMix>
         </div>
       )}
     </div>

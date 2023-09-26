@@ -73,7 +73,7 @@
     flex-direction: column;
     margin-left: 48px;
     video {
-      width: 350px;
+      width: 348px;
       height: 200px;
       border: 2px solid;
       border-image: linear-gradient(to bottom, #999, transparent) 1;
@@ -81,7 +81,8 @@
     .name {
       text-align: center;
       background-color: rgb(52, 17, 11);
-      margin: 8px 0;
+      margin-top: 6px;
+      margin-bottom: 8px;
       border-radius: 2px;
       font-size: 22px !important;
     }
@@ -126,13 +127,17 @@
     }
     .desc {
       padding: 18px 12px;
-      white-space: pre-wrap;
-      font-size: 16px !important;
-      flex: 1;
-      overflow-y: scroll;
-      color: #ccc;
-      &::-webkit-scrollbar {
-        display: none;
+      background-color: #000000cf;
+      margin-top: 8px;
+      > div {
+        white-space: pre-wrap;
+        font-size: 16px !important;
+        color: #ccc;
+        height: 200px;
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+          display: none;
+        }
       }
     }
   }
