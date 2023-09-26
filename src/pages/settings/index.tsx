@@ -1,7 +1,10 @@
 import { FC } from "react";
+import Settings from "../information/Settings";
 
-export const SettingsPage:FC=()=>{
-    return(
-        <div>SettingsPage</div>
-    )
-}
+export const SettingsPage: FC = () => {
+  return (
+    <div className="wrapper">
+      <Settings />
+    </div>
+  );
+};
