@@ -6,7 +6,11 @@ import {
   EquipmentLevelColorMap,
   EquipmentLevelLabelMap,
 } from "../../../const/const";
-import { EquipmentAttribute, EquipmentLevelEnum } from "../../../const/type";
+import {
+  BasicAttribute,
+  Attribute,
+  EquipmentLevelEnum,
+} from "../../../const/type";
 import { EquipmentData } from "../CommonTable/type";
 
 interface Props {
@@ -17,7 +21,7 @@ interface Props {
 function EquipmentDetail(props: Props) {
   const { data, isSelected } = props;
 
-  const attribute = Object.entries(data?.attribute || {}).map(
+  const attribute = Object.entries(data?.attribute?.basic || {}).map(
     ([key, value]) => {
       return (
         <div>
@@ -27,7 +31,7 @@ function EquipmentDetail(props: Props) {
               alt={key}
               className="icon"
             />
-            <span>{AttributeLabelMap[key as keyof EquipmentAttribute]}</span>
+            <span>{AttributeLabelMap[key as keyof BasicAttribute]}</span>
           </div>
           <div className="number">{value}</div>
         </div>

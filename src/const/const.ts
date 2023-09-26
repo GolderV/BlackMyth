@@ -1,4 +1,10 @@
-import { EquipmentAttribute, EquipmentLevelEnum } from "./type";
+import {
+  BasicAttribute,
+  DisasterDefense,
+  Attribute,
+  EquipmentLevelEnum,
+  CoreAttribute,
+} from "./type";
 
 export const EquipmentLevelLabelMap = {
   [EquipmentLevelEnum.Specials]: "特品",
@@ -12,11 +18,23 @@ export const EquipmentLevelColorMap = {
   [EquipmentLevelEnum.Good]: "#0c4339",
 };
 
-export const AttributeLabelMap: Record<keyof EquipmentAttribute, string> = {
-  defense: "防御力",
-  attack: "攻击力",
-  health: "生命值",
-  speed: "速度",
+export const AttributeLabelMap: Record<
+  keyof BasicAttribute | keyof DisasterDefense | keyof CoreAttribute,
+  string
+> = {
+  defense: "防御",
+  attack: "攻击",
+  health: "生命",
+  mana: "法力",
+  energy: "气力",
+  criticalStrikeRate: "暴击率",
+  criticalMultiplier: "暴击倍率",
+  damageBonus: "伤害加成",
+  damageReduction: "伤害减免",
+  chillDefense: "辟寒",
+  fireDefense: "辟火",
+  poisonDefense: "辟毒",
+  thunderDefense: "辟雷",
 };
 
 export const MaterialLevelLabelMap = {

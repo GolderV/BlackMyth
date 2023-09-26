@@ -9,7 +9,9 @@ export const BAIXISUIT: Record<string, EquipmentData> = {
     image: "/suit/baixi/baixinuomian.png",
     level: EquipmentLevelEnum.Top,
     attribute: {
-      defense: 20,
+      basic: {
+        defense: 20,
+      },
     },
     comments: "闹里挣钱，静处安身",
   },

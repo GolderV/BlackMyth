@@ -1,6 +1,6 @@
 import {
   EquipmentLevelEnum,
-  EquipmentAttribute,
+  Attribute,
   MaterialLevelEnum,
 } from "../../../const/type";
 
@@ -17,7 +17,7 @@ export interface EquipmentData extends BaseData {
   /** 装备等级 */
   level: EquipmentLevelEnum;
   /** 装备属性加成 */
-  attribute?: EquipmentAttribute;
+  attribute?: Attribute;
   /** 套装效果 */
   specialEffect?: EquipmentSpecialEffect;
 }

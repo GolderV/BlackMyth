@@ -2,6 +2,38 @@ import "./index.scss";
 import EquipmentDetail from "./EquipmentDetail";
 import CommonTabs from "../CommonTabs";
 import { EQUIPMENT_ITEM } from "./config";
+import {
+  Attribute,
+  BasicAttribute,
+  DisasterDefense,
+} from "../../../const/type";
+import { AttributeLabelMap } from "../../../const/const";
+import BgMix from "../../../components/BgMix";
+
+const UserInfo: Attribute = {
+  core: {
+    health: 480,
+    mana: 260,
+    energy: 260,
+  },
+  basic: {
+    attack: 85,
+    defense: 129,
+    criticalStrikeRate: "15%",
+    criticalMultiplier: "0%",
+    damageBonus: "0%",
+    damageReduction: "0%",
+  },
+  disasterDefense: {
+    chillDefense: 0,
+    fireDefense: 0,
+    poisonDefense: 0,
+    thunderDefense: 0,
+  },
+};
+
+const IconMap = {};
+
 interface Props {}
 
 function Equipment(props: Props) {
@@ -15,35 +47,34 @@ function Equipment(props: Props) {
       />
       <div className="user-info">
         <div className="top">
-          <div className="health">
-            <img
-              src={process.env.PUBLIC_URL + "/attribute/health.svg"}
-              alt="health"
-            />
-            <span>480</span>
-          </div>
-          <div className="speed">
-            <img
-              src={process.env.PUBLIC_URL + "/attribute/speed.svg"}
-              alt="speed"
-            />
-            <span>260</span>
-          </div>
-          <div className="lightning">
-            <img
-              src={process.env.PUBLIC_URL + "/attribute/lightning.svg"}
-              alt="lightning"
-            />
-            <span>260</span>
-          </div>
+          {Object.entries(UserInfo.core ?? {}).map(([key, val]) => (
+            <div className={key}>
+              <img
+                src={`${process.env.PUBLIC_URL}/attribute/${key}.svg`}
+                alt={key}
+              />
+              <span>{val}</span>
+            </div>
+          ))}
         </div>
-        <div className="list">
-          <div>攻击 85</div>
-          <div>防御 110</div>
-          <div>会心 15%</div>
-          <div>攻速 0%</div>
-          <div>法力 0%</div>
-          <div>魔抗 0%</div>
+        <div className="divider" />
+        <div className="tips">·· 基础属性 ··</div>
+        <div className="base-list">
+          {Object.entries(UserInfo.basic ?? {}).map(([key, val]) => (
+            <div>
+              <span>{AttributeLabelMap[key as keyof BasicAttribute]}</span>
+              <span>{val}</span>
+            </div>
+          ))}
+        </div>
+        <div className="tips">·· 四灾耐性 ··</div>
+        <div className="disaster-list">
+          {Object.entries(UserInfo.disasterDefense ?? {}).map(([key, val]) => (
+            <div>
+              <span>{AttributeLabelMap[key as keyof DisasterDefense]}</span>
+              <span>{val}</span>
+            </div>
+          ))}
         </div>
       </div>
       <CommonTabs tabItems={EQUIPMENT_ITEM} DetailComp={EquipmentDetail} />
