@@ -1,9 +1,9 @@
 import { TabsProps } from "antd";
-import { SettingsPage } from "../settings";
 import Equipment from "./Equipment";
 import Journal from "./Journal";
 import Backpack from "./Backpack";
 import Settings from "./Settings";
+import Spells from "./Spells";
 
 export const SYSTEM_TABS_ITEMS: TabsProps["items"] = [
   {
@@ -14,7 +14,7 @@ export const SYSTEM_TABS_ITEMS: TabsProps["items"] = [
   {
     key: "Spells",
     label: "神通",
-    disabled: true,
+    children: <Spells />,
   },
   {
     key: "Equipment",
@@ -37,5 +37,3 @@ export const SYSTEM_TABS_ITEMS: TabsProps["items"] = [
     children: <Settings />,
   },
 ];
-
-// export const
