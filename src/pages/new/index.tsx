@@ -3,7 +3,7 @@ import styles from "./index.module.scss";
 import { BOSS_ITEMS, BossData } from "./config";
 import { Modal } from "antd";
 
-function NewGame() {
+function NewGamePage() {
   const [showTips, setShowTips] = useState(true);
   const [currentSelect, setCurrentSelect] = useState<BossData>();
   const img = currentSelect?.img || "wukong.jpg";
@@ -114,4 +114,4 @@ function NewGame() {
   );
 }
 
-export default NewGame;
+export default NewGamePage;

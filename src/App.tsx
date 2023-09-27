@@ -1,26 +1,44 @@
 import "./App.scss";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { MainPage } from "./pages/main";
-import { MENU } from "./pages/main/config";
-import NewGame from "./pages/new";
+import NewGamePage from "./pages/new";
+import { GamePage } from "./pages/game";
+import { InformationPage } from "./pages/information";
+import { SettingsPage } from "./pages/settings";
+import { TeamPage } from "./pages/team";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <MainPage />,
+  },
+  {
+    path: "/game",
+    element: <GamePage />,
+  },
+  {
+    path: "/game/new",
+    element: <NewGamePage />,
+  },
+  {
+    path: "/information",
+    element: <InformationPage />,
+  },
+  {
+    path: "/settings",
+    element: <SettingsPage />,
+  },
+  {
+    path: "/team",
+    element: <TeamPage />,
+  },
+]);
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/game/new" element={<NewGame />} />
-          {MENU.map((item) => (
-            <Route
-              key={item.key}
-              path={item.path}
-              element={<item.component />}
-            />
-          ))}
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <div className="App">
+      <RouterProvider router={router} />
+    </div>
   );
 }
 
