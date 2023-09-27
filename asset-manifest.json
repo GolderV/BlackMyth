@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2fba4141.css",
+    "main.js": "/static/js/main.e3bc5034.js",
+    "static/js/787.e94bdb3e.chunk.js": "/static/js/787.e94bdb3e.chunk.js",
+    "static/media/tongqian.png": "/static/media/tongqian.7f0a06e96162bb571ce5.png",
+    "static/media/bgmix.jpg": "/static/media/bgmix.c1606488c7529264d823.jpg",
+    "index.html": "/index.html",
+    "main.2fba4141.css.map": "/static/css/main.2fba4141.css.map",
+    "main.e3bc5034.js.map": "/static/js/main.e3bc5034.js.map",
+    "787.e94bdb3e.chunk.js.map": "/static/js/787.e94bdb3e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2fba4141.css",
+    "static/js/main.e3bc5034.js"
+  ]
+}
