@@ -45,7 +45,7 @@ function CommonTable(props: IProps) {
               )}
             >
               <img
-                src={e.image}
+                src={process.env.PUBLIC_URL + e.image}
                 onClick={() => setCurrentSelect(e)}
                 onMouseEnter={() => setHoveredItem(e)}
                 alt={e.key}

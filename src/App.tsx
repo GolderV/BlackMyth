@@ -1,5 +1,5 @@
 import "./App.scss";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createHashRouter } from "react-router-dom";
 import { MainPage } from "./pages/main";
 import NewGamePage from "./pages/new";
 import { GamePage } from "./pages/game";
@@ -7,7 +7,7 @@ import { InformationPage } from "./pages/information";
 import { SettingsPage } from "./pages/settings";
 import { TeamPage } from "./pages/team";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <MainPage />,
