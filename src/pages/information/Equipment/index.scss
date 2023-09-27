@@ -73,6 +73,10 @@
 
   &:hover {
     background-image: linear-gradient(to bottom, #333 0%, #000 35%);
+    .top {
+      background-image: url("../../../../public/background/tongqian.png");
+      background-size: cover;
+    }
     .divider {
       width: 100%;
       height: 2px;

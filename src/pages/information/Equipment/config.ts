@@ -1,4 +1,4 @@
-import { FACE_DATA } from "./currentData";
+import { ARM_DATA, CUIRASS_DATA, FACE_DATA, LEG_DATA } from "./currentData";
 
 // 防具类型
 export const EQUIPMENT_ITEM = [
@@ -10,16 +10,16 @@ export const EQUIPMENT_ITEM = [
   {
     key: "cuirass",
     label: "胸甲",
-    data: FACE_DATA,
+    data: CUIRASS_DATA,
   },
   {
     key: "arm",
     label: "臂甲",
-    data: FACE_DATA,
+    data: ARM_DATA,
   },
   {
     key: "leg",
     label: "腿甲",
-    data: FACE_DATA,
+    data: LEG_DATA,
   },
 ];

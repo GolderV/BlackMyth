@@ -15,7 +15,7 @@ export const EquipmentLevelLabelMap = {
 export const EquipmentLevelColorMap = {
   [EquipmentLevelEnum.Specials]: "#201154",
   [EquipmentLevelEnum.Top]: "#144471",
-  [EquipmentLevelEnum.Good]: "#0c4339",
+  [EquipmentLevelEnum.Good]: "rgb(61 116 85)",
 };
 
 export const AttributeLabelMap: Record<
