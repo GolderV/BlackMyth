@@ -67,7 +67,7 @@ export const Journal: React.FC = () => {
           <div className="info">
             <div className="poetry">{currentSelected?.info?.poetry}</div>
             <div className="desc">
-              {currentSelected?.info?.desc || "未收录"}
+              {currentSelected ? currentSelected.info?.desc || "未收录" : ""}
             </div>
           </div>
         </div>
