@@ -10,13 +10,106 @@ import { MonsterData } from "./type";
 // },
 
 /** 妖王数据 */
-export const KING_DATA = [];
+export const KING_DATA: MonsterData[] = [
+  { label: "黑熊精", key: "heixiongjing" },
+  {
+    label: "凌虚子",
+    key: "lingxuzi",
+    info: {
+      img: "https://imgsa.baidu.com/forum/pic/item/d6bd5e029245d6884ba6b495e2c27d1ed21b2418.jpg",
+    },
+  },
+  { label: "赤髯龙", key: "chiranlong" },
+  { label: "虎先锋", key: "huxianfeng" },
+  { label: "小骊龙", key: "xiaolilong" },
+  { label: "石先锋", key: "shixianfeng" },
+  {
+    label: "亢金龙",
+    key: "kangjinlong",
+    info: {
+      img: "https://imgsa.baidu.com/forum/pic/item/2c9b14fc5266d016a7b89819d12bd40735fa351b.jpg",
+    },
+  },
+  {
+    label: "毒敌大王",
+    key: "dudidawang",
+    info: {
+      img: "https://imgsa.baidu.com/forum/pic/item/954abbd9bc3eb13560b5dd89e01ea8d3fd1f4457.jpg",
+    },
+  },
+  {
+    label: "晦月魔君",
+    key: "huiyuemojun",
+    info: {
+      img: "https://imgsa.baidu.com/forum/pic/item/658f99c69f3df8dcb652e5a38b11728b47102852.jpg",
+    },
+  },
+  { label: "增长天王", key: "zengzhangtianwang" },
+  { label: "广目天王", key: "guangmutianwang" },
+  { label: "持国天王", key: "chiguotianwang" },
+  { label: "多闻天王", key: "duowentianwang" },
+  { label: "石敢当", key: "shigandang" },
+  { label: "黄眉大王", key: "huangmeidawang" },
+];
 
-/** 首领数据 */
-export const LEADER_DATA = [];
-
-/** 先锋数据 */
-export const RINGLEADER_DATA = [];
+/** 头目数据 */
+export const RINGLEADER_DATA: MonsterData[] = [
+  {
+    label: "刀狼教头",
+    key: "daolangjiaotou",
+    info: {
+      img: "https://imgsa.baidu.com/forum/pic/item/8c651e305c6034a83f77b2b08d1349540923762f.jpg",
+    },
+  },
+  { label: "耳听怒", key: "ertingnu" },
+  {
+    label: "眼看喜",
+    key: "yankanxi",
+    info: {
+      img: "https://imgsa.baidu.com/forum/pic/item/2f698ff4e0fe9925e299636172a85edf8db1712f.jpg",
+    },
+  },
+  {
+    label: "身本忧",
+    key: "shenbenyou",
+    info: {
+      img: "https://imgsa.baidu.com/forum/pic/item/685e701a0ef41bd50bf7eec517da81cb39db3d18.jpg",
+    },
+  },
+  { label: "舌尝思", key: "shechangsi" },
+  { label: "意见欲", key: "yijianyu" },
+  { label: "鼻嗅爱", key: "bixiuai" },
+  { label: "无影手", key: "wuyingshou" },
+  { label: "靡道人", key: "midaoren" },
+  { label: "僧面", key: "sengmian" },
+  { label: "巨灵神", key: "julingshen" },
+  { label: "百足虫", key: "baizuchong" },
+  {
+    label: "赤尻马猴",
+    key: "chikaomahou",
+    info: {
+      img: "https://imgsa.baidu.com/forum/pic/item/c16a8a35349b033b410bf6eb53ce36d3d439bdc5.jpg",
+    },
+  },
+  {
+    label: "双头鼠",
+    key: "shuangtoushu",
+    info: {
+      img: "https://imgsa.baidu.com/forum/pic/item/7519872cd42a28341000303a1db5c9ea15cebf1a.jpg",
+    },
+  },
+  { label: "石中人", key: "shizhongren" },
+  {
+    label: "蓝采",
+    key: "lancai",
+    info: {
+      img: "https://imgsa.baidu.com/forum/pic/item/3d74969a033b5bb5ee7126cf70d3d539b600bc1a.jpg",
+    },
+  },
+  { label: "犰狳精", key: "qiuyujing" },
+  { label: "石母", key: "shimu" },
+  { label: "武僧", key: "wuseng" },
+];
 
 /** 小妖数据 */
 export const GOBLIN_DATA: MonsterData[] = [
@@ -151,29 +244,201 @@ export const GOBLIN_DATA: MonsterData[] = [
     label: "石苍苍",
     key: "scc",
   },
+  {
+    label: "狼侍卫",
+    key: "langshiwei",
+    info: {
+      img: "https://imgsa.baidu.com/forum/pic/item/38b542ff9925bc3103c80ba918df8db1cb13702f.jpg",
+    },
+  },
+  {
+    label: "灵芝精",
+    key: "lingzhijing",
+    info: {
+      img: "https://imgsa.baidu.com/forum/pic/item/ac526afdc3cec3fd609aa1449088d43f87942718.jpg",
+    },
+  },
+  {
+    label: "鼠精",
+    key: "shujing",
+    info: {
+      img: "https://imgsa.baidu.com/forum/pic/item/c75bacf51bd5ad6e7a5d62dbc7cb39dbb6fd3c18.jpg",
+    },
+  },
+  {
+    label: "蛤蟆精",
+    key: "hamajing",
+    info: {
+      img: "https://imgsa.baidu.com/forum/pic/item/460359f3b21193139ab5f58123380cd790238dca.jpg",
+    },
+  },
+  {
+    label: "香客",
+    key: "xiangke",
+    info: {
+      img: "https://imgsa.baidu.com/forum/pic/item/8a7d5addd100baa15888418a0110b912c8fc2e18.jpg",
+    },
+  },
+  {
+    label: "盲僧甲",
+    key: "mangseng_01",
+    info: {
+      img: "https://imgsa.baidu.com/forum/pic/item/87057489d43f8794055b4e1f941b0ef41bd53a18.jpg",
+    },
+  },
+  {
+    label: "盲僧乙",
+    key: "mangseng_02",
+    info: {
+      img: "https://imgsa.baidu.com/forum/pic/item/e9433044d688d43f270d97c33b1ed21b0ef43b18.jpg",
+    },
+  },
+  {
+    label: "盲僧丙",
+    key: "mangseng_03",
+    info: {
+      img: "https://imgsa.baidu.com/forum/pic/item/87057489d43f8794055b4e1f941b0ef41bd53a18.jpg",
+    },
+  },
+  {
+    label: "盲僧丁",
+    key: "mangseng_04",
+    info: {
+      img: "https://imgsa.baidu.com/forum/pic/item/5c14ab22dd54564efaf0ee08f5de9c82d1584f2f.jpg",
+    },
+  },
+  {
+    label: "空性",
+    key: "kongxing",
+    info: {
+      img: "https://imgsa.baidu.com/forum/pic/item/8a7d5addd100baa15888418a0110b912c8fc2e18.jpg",
+    },
+  },
+  { label: "鬼侍卫", key: "guishiwei" },
+  { label: "犀将军", key: "xijiangjun" },
+  { label: "犀牛", key: "xiniu" },
+  { label: "天兵甲", key: "tianbing1" },
+  { label: "天兵乙", key: "tianbing2" },
+  { label: "天将", key: "tianjiang" },
+  { label: "怪鸟", key: "guainiao" },
+  {
+    label: "村民",
+    key: "cunmin",
+    info: {
+      img: "https://imgsa.baidu.com/forum/pic/item/c44911df9c82d15893c92180c60a19d8bc3e427d.jpg",
+    },
+  },
+  {
+    label: "乱齿兽",
+    key: "luanchishou",
+    info: {
+      img: "https://imgsa.baidu.com/forum/pic/item/f5be3b24bc315c606b851edecbb1cb13495477b4.jpg",
+    },
+  },
+  {
+    label: "太平轮",
+    key: "taipinglun",
+    info: {
+      img: "https://imgsa.baidu.com/forum/pic/item/7667c0d1f703918f532e37fb173d269758eec4c2.jpg",
+    },
+  },
+  { label: "沙岭海", key: "shalinghai" },
+  {
+    label: "硕鼠",
+    key: "shuoshu",
+    info: {
+      img: "https://imgsa.baidu.com/forum/pic/item/7519872cd42a28341000303a1db5c9ea15cebf1a.jpg",
+    },
+  },
+  { label: "和尚", key: "heshang" },
+  {
+    label: "胖头陀",
+    key: "pangtoutuo",
+    info: {
+      img: "https://imgsa.baidu.com/forum/pic/item/c14797fbe6cd7b892bcd3cb2492442a7d9330e1b.jpg",
+    },
+  },
+  {
+    label: "魔像",
+    key: "moxiang",
+    info: {
+      img: "https://imgsa.baidu.com/forum/pic/item/be58352ad40735fa55514888d8510fb30f24081b.jpg",
+    },
+  },
+  {
+    label: "四将甲",
+    key: "sijiang1",
+    info: {
+      img: "https://imgsa.baidu.com/forum/pic/item/6ec93c500fb30f24fa3bea328e95d143ad4b031b.jpg",
+    },
+  },
+  {
+    label: "四将乙",
+    key: "sijiang2",
+    info: {
+      img: "https://imgsa.baidu.com/forum/pic/item/8b11adb20f2442a760affb949743ad4bd113021b.jpg",
+    },
+  },
+  {
+    label: "金刚像",
+    key: "jingangxiang",
+    info: {
+      img: "https://imgsa.baidu.com/forum/pic/item/a3bdf067d01609240484a42a920735fae6cd341b.jpg",
+    },
+  },
+  {
+    label: "石像兽",
+    key: "shixiangshou",
+    info: {
+      img: "https://imgsa.baidu.com/forum/pic/item/f38dd9889e510fb3b8b871a69f33c895d1430c1b.jpg",
+    },
+  },
+  {
+    label: "烂佛陀",
+    key: "lanfotuo",
+    info: {
+      img: "https://imgsa.baidu.com/forum/pic/item/948b9bdab6fd52667d8a3a25ed18972bd407361b.jpg",
+    },
+  },
+  {
+    label: "佛陀",
+    key: "buddha",
+    info: {
+      img: "https://imgsa.baidu.com/forum/pic/item/167bf9b4c9ea15ce2b6dea38f0003af33b87b2c5.jpg",
+    },
+  },
+  { label: "小菌君", key: "xiaojunjun" },
+  { label: "蜘蛛精", key: "zhizhujing" },
+  { label: "黄花怪甲", key: "huanghuaguai1" },
+  { label: "黄花怪乙", key: "huanghuaguai2" },
+  { label: "蜥蜴怪甲", key: "xiyiguai1" },
+  { label: "蜥蜴怪乙", key: "xiyiguai2" },
+  { label: "牛头", key: "niutou" },
+  { label: "马面", key: "mamian" },
+  { label: "红眼", key: "hongyan" },
+  { label: "老鼠精", key: "laoshujing" },
+  { label: "背手和尚", key: "beishouheshang" },
+  { label: "扇子怪", key: "shanziguai" },
+  { label: "青狮精", key: "qingshijing" },
+  { label: "龙王", key: "longwang" },
+  { label: "青色巨人", key: "qingsejuren" },
+  { label: "蛇巡司", key: "shexunsi" },
+  { label: "甲虫怪", key: "jiachongguai" },
 ];
 
 export const DATA = [
   {
-    label: "妖王",
+    label: `妖王（${KING_DATA.length}）`,
     key: "King",
     children: KING_DATA,
-    disabled: true,
   },
   {
-    label: "首领",
-    key: "Leader",
-    children: LEADER_DATA,
-    disabled: true,
-  },
-  {
-    label: "头目",
+    label: `头目（${RINGLEADER_DATA.length}）`,
     key: "Ringleader",
     children: RINGLEADER_DATA,
-    disabled: true,
   },
   {
-    label: "小妖",
+    label: `小妖（${GOBLIN_DATA.length}）`,
     key: "Goblin",
     children: GOBLIN_DATA,
   },
