@@ -1,0 +1,33 @@
+.select-bar {
+  display: flex;
+  align-items: center;
+  .title {
+    height: fit-content;
+    padding-left: 8px;
+    font-weight: bold;
+    width: 200px;
+    background-image: linear-gradient(to right, #ccc, transparent);
+    box-shadow: 15px 0px 15px -15px #000 inset;
+    > span + span {
+      margin-left: 8px;
+    }
+  }
+}
+.content {
+  margin-left: 48px;
+  color: #666;
+  .count {
+    border-bottom: 1px solid #666;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+  }
+  .label {
+    font-size: 36px !important;
+    color: #ccc;
+  }
+  .effect {
+    font-size: 22px !important;
+    color: #ccc;
+    margin: 12px 0;
+  }
+}
