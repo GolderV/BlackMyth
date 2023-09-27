@@ -66,7 +66,7 @@ export const GamePage: FC = () => {
 
   return (
     <div className="game-page" onClick={() => setClickCount(clickCount + 1)}>
-      <audio src={process.env.PUBLIC_URL + "/oldMonkey.mp3"} autoPlay></audio>
+      <audio src={process.env.PUBLIC_URL + "/oldMonkey.mp3"} autoPlay loop />
       <div className="shadow" />
       <div className="title">
         <img
