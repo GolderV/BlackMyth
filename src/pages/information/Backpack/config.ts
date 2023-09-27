@@ -1,4 +1,9 @@
-import { HERBS_DATA } from "./data";
+import {
+  HERBS_DATA,
+  KEY_ITEMS_DATA,
+  MATERIALS_DATA,
+  MEDICINES_DATA,
+} from "./data";
 
 // 防具类型
 export const BACKPACK_ITEMS = [
@@ -10,16 +15,16 @@ export const BACKPACK_ITEMS = [
   {
     key: "Medicines",
     label: "丹药",
-    data: HERBS_DATA,
+    data: MEDICINES_DATA,
   },
   {
     key: "Materials",
     label: "材料",
-    data: HERBS_DATA,
+    data: MATERIALS_DATA,
   },
   {
     key: "KeyItems",
     label: "细软",
-    data: HERBS_DATA,
+    data: KEY_ITEMS_DATA,
   },
 ];
