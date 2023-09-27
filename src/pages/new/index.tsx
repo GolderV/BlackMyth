@@ -3,10 +3,7 @@ import styles from "./index.module.scss";
 import { BOSS_ITEMS, BossData } from "./config";
 import { Modal } from "antd";
 
-interface Props {}
-
-function NewGame(props: Props) {
-  const {} = props;
+function NewGame() {
   const [showTips, setShowTips] = useState(true);
   const [currentSelect, setCurrentSelect] = useState<BossData>();
   const img = currentSelect?.img || "wukong.jpg";

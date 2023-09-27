@@ -1,7 +1,5 @@
-import React from "react";
 import Hexagon from "../../../components/Hexagon";
 import styles from "./index.module.scss";
-import BgMix from "../../../components/BgMix";
 import { MaterialData } from "../CommonTable/type";
 import { MaterialLevelLabelMap } from "../../../const/const";
 import { MaterialLevelEnum } from "../../../const/type";

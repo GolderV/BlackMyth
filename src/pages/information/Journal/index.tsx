@@ -1,5 +1,4 @@
 import React, { useMemo, useState } from "react";
-import type { MenuProps } from "antd";
 import { Input, Menu } from "antd";
 import { DATA } from "./data";
 import "./index.scss";

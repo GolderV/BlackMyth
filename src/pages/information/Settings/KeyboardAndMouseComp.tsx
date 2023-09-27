@@ -1,8 +1,4 @@
-interface Props {}
-
-function KeyboardAndMouseComp(props: Props) {
-  const {} = props;
-
+function KeyboardAndMouseComp() {
   return (
     <div>
       <img

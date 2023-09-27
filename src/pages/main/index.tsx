@@ -1,6 +1,5 @@
-import { FC, useEffect, useMemo, useState } from "react";
+import { FC, useState } from "react";
 import { MENU } from "./config";
-import { Link, Route, Routes } from "react-router-dom";
 import styles from "./index.module.scss";
 import { Menu } from "antd";
 // import video from '/background.mp4';

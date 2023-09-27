@@ -1,8 +1,4 @@
-interface Props {}
-
-function ControllerComp(props: Props) {
-  const {} = props;
-
+function ControllerComp() {
   return (
     <div style={{ textAlign: "center" }}>
       <img

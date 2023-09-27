@@ -1,7 +1,6 @@
 import {
   BasicAttribute,
   DisasterDefense,
-  Attribute,
   EquipmentLevelEnum,
   CoreAttribute,
 } from "./type";

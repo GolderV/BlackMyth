@@ -8,7 +8,6 @@ import {
   DisasterDefense,
 } from "../../../const/type";
 import { AttributeLabelMap } from "../../../const/const";
-import BgMix from "../../../components/BgMix";
 
 const UserInfo: Attribute = {
   core: {
@@ -32,12 +31,7 @@ const UserInfo: Attribute = {
   },
 };
 
-const IconMap = {};
-
-interface Props {}
-
-function Equipment(props: Props) {
-  const {} = props;
+function Equipment() {
   return (
     <>
       <img

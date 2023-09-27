@@ -6,11 +6,7 @@ import {
   EquipmentLevelColorMap,
   EquipmentLevelLabelMap,
 } from "../../../const/const";
-import {
-  BasicAttribute,
-  Attribute,
-  EquipmentLevelEnum,
-} from "../../../const/type";
+import { BasicAttribute, EquipmentLevelEnum } from "../../../const/type";
 import { EquipmentData } from "../CommonTable/type";
 
 interface Props {

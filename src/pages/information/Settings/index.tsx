@@ -1,12 +1,8 @@
-import { Menu, Tabs } from "antd";
+import { Tabs } from "antd";
 import styles from "./index.module.scss";
 import { SETTINGS_ITEMS } from "./config";
 
-interface Props {}
-
-function Settings(props: Props) {
-  const {} = props;
-
+function Settings() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.left}>

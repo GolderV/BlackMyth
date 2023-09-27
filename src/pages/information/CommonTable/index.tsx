@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useState } from "react";
 import { EquipmentData, MaterialData } from "./type";
 import "./index.scss";
 import classnames from "classnames";
@@ -48,6 +48,7 @@ function CommonTable(props: IProps) {
                 src={e.image}
                 onClick={() => setCurrentSelect(e)}
                 onMouseEnter={() => setHoveredItem(e)}
+                alt={e.key}
               />
             </div>
           ))}
