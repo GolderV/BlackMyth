@@ -45,7 +45,7 @@ export const Journal: React.FC = () => {
   };
 
   const imgSrc = currentSelected?.info?.img;
-  const prefix = imgSrc.includes('http') ? '' : process.env.PUBLIC_URL;
+  const prefix = imgSrc?.includes('http') ? '' : process.env.PUBLIC_URL;
 
   return (
     <div className="journal">
