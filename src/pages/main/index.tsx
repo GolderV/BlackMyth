@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { MENU } from "./config";
 import styles from "./index.module.scss";
 import { Menu } from "antd";
@@ -6,11 +6,19 @@ import { Menu } from "antd";
 
 export const MainPage: FC = () => {
   const [isClicked, setIsClicked] = useState(false);
+
+  useEffect(() => {
+    const audio = document.querySelector("audio");
+    if (audio) {
+      audio.volume = 0.3;
+    }
+  }, []);
+
   const onPlay = () => {
     const audio = document.querySelector("audio");
     if (audio) {
       audio.play();
-      audio.volume = 0.5;
+      audio.volume = 0.3;
     }
     setIsClicked(true);
   };
