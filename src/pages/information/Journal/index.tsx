@@ -44,6 +44,9 @@ export const Journal: React.FC = () => {
     setSearchKey(e.target.value);
   };
 
+  const imgSrc = currentSelected?.info?.img;
+  const prefix = imgSrc.includes('http') ? '' : process.env.PUBLIC_URL;
+
   return (
     <div className="journal">
       <div className="top">
@@ -72,7 +75,7 @@ export const Journal: React.FC = () => {
           </div>
         </div>
         <img
-          src={currentSelected?.info?.img}
+          src={prefix + imgSrc}
           alt={currentSelected?.label}
           height="100%"
         />
