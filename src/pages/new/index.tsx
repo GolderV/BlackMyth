@@ -1,12 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./index.module.scss";
 import { BOSS_ITEMS, BossData } from "./config";
 import { Modal } from "antd";
+import ReactGA from "react-ga4";
 
 function NewGamePage() {
   const [showTips, setShowTips] = useState(true);
   const [currentSelect, setCurrentSelect] = useState<BossData>();
   const img = currentSelect?.img || "wukong.jpg";
+
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: "/game/new", title: "newGame" });
+  }, []);
 
   const onKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
     console.log(event);

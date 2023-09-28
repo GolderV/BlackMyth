@@ -1,5 +1,6 @@
 import { FC, useEffect, useState } from "react";
 import "./index.scss";
+import ReactGA from "react-ga4";
 
 // 24/8/20
 const DATE = 1724119200000;
@@ -15,6 +16,10 @@ export const GamePage: FC = () => {
   const [progress, setProgress] = useState(0);
   const [countdown, setCountdown] = useState(DATE - Date.now());
   const [clickCount, setClickCount] = useState(0);
+
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: "/team", title: "team" });
+  }, []);
 
   useEffect(() => {
     const timer1 = setInterval(() => {

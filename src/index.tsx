@@ -1,11 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import MyApp from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import MyApp from "./App";
+import reportWebVitals from "./reportWebVitals";
+import ReactGA from "react-ga4";
+
+// history.listen 的方式不能监听到反复跳转相同页面（因为history没变），所以手动在每个页面做监听
+ReactGA.initialize("G-X7QHXMMWL7");
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>

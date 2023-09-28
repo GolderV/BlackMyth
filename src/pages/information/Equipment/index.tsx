@@ -42,7 +42,7 @@ function Equipment() {
       <div className="user-info">
         <div className="top">
           {Object.entries(UserInfo.core ?? {}).map(([key, val]) => (
-            <div className={key}>
+            <div className={key} key={key}>
               <img
                 src={`${process.env.PUBLIC_URL}/attribute/${key}.svg`}
                 alt={key}
