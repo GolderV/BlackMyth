@@ -12,7 +12,7 @@ export const EquipmentLevelLabelMap = {
 };
 
 export const EquipmentLevelColorMap = {
-  [EquipmentLevelEnum.Specials]: "#201154",
+  [EquipmentLevelEnum.Specials]: "rgb(69 48 140)",
   [EquipmentLevelEnum.Top]: "#144471",
   [EquipmentLevelEnum.Good]: "rgb(61 116 85)",
 };

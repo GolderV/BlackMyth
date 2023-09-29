@@ -41,12 +41,12 @@ function EquipmentDetail(props: Props) {
         className="info"
         style={{
           backgroundColor:
-            EquipmentLevelColorMap[data?.level || EquipmentLevelEnum.Good],
+            EquipmentLevelColorMap[data?.level ?? EquipmentLevelEnum.Good],
         }}
       >
         <div className={classnames("level", isSelected && "selected")}>
           <span>
-            {EquipmentLevelLabelMap[data?.level || EquipmentLevelEnum.Good]}
+            {EquipmentLevelLabelMap[data?.level ?? EquipmentLevelEnum.Good]}
           </span>
           {isSelected && <span>当前穿戴</span>}
         </div>

@@ -47,7 +47,7 @@ function BackPackDetail(props: Props) {
         <div className={styles.info}>
           <div className={styles.label}>{data?.label}</div>
           <div className={styles.level}>
-            {MaterialLevelLabelMap[data?.level || MaterialLevelEnum.Good]}
+            {MaterialLevelLabelMap[data?.level ?? MaterialLevelEnum.Good]}
           </div>
           <div className={styles.effect}>{data?.effect}</div>
           <div className={styles.comments}>{data?.comments}</div>
