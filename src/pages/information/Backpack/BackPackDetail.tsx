@@ -29,16 +29,14 @@ function BackPackDetail(props: Props) {
         <div className={styles.count}>
           <div>
             持有：
-            <span style={{ color: !data?.hold ? "rgb(96,37,36)" : "#ccc" }}>
+            <span style={{ color: !data?.hold ? "#a83d32" : "#ccc" }}>
               {data?.hold || 0}
             </span>
             <span>/5</span>
           </div>
           <div>
             库存：
-            <span
-              style={{ color: !data?.inStorage ? "rgb(96,37,36)" : "#ccc" }}
-            >
+            <span style={{ color: !data?.inStorage ? "#a83d32" : "#ccc" }}>
               {data?.inStorage || 0}
             </span>
             <span>/99</span>

@@ -1,0 +1,41 @@
+.list {
+  position: absolute;
+  top: 100vh;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ccc;
+
+  animation-duration: 8s;
+  animation-name: listScroll;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  pointer-events: none;
+  .sp {
+    font-size: 24px !important;
+  }
+  > p {
+    text-align: center;
+    a {
+      color: #a58f5e;
+      pointer-events: all;
+    }
+    a + a {
+      margin-left: 8px;
+    }
+  }
+
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes listScroll {
+  from {
+    top: 100vh;
+  }
+
+  to {
+    top: -200px;
+  }
+}
