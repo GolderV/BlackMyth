@@ -11,7 +11,13 @@ import { MonsterData } from "./type";
 
 /** 妖王数据 */
 export const KING_DATA: MonsterData[] = [
-  { label: "黑熊精", key: "heixiongjing" },
+  {
+    label: "黑熊精",
+    key: "heixiongjing",
+    info: {
+      img: "https://picx.zhimg.com/80/v2-a5107d6f1ad1d22ddbc9f509f4c1cde1_720w.webp?source=1940ef5c",
+    },
+  },
   {
     label: "凌虚子",
     key: "lingxuzi",
@@ -44,12 +50,36 @@ export const KING_DATA: MonsterData[] = [
       img: "https://imgsa.baidu.com/forum/pic/item/658f99c69f3df8dcb652e5a38b11728b47102852.jpg",
     },
   },
-  { label: "增长天王", key: "zengzhangtianwang" },
-  { label: "广目天王", key: "guangmutianwang" },
+  {
+    label: "增长天王",
+    key: "zengzhangtianwang",
+    info: {
+      img: "https://picx.zhimg.com/80/v2-bacec9b364fa2b7e800003c37ac1b668_720w.webp?source=1940ef5c",
+    },
+  },
+  {
+    label: "广目天王",
+    key: "guangmutianwang",
+    info: {
+      img: "https://pic1.zhimg.com/80/v2-cee90743348bab475469c63e506af848_720w.webp?source=1940ef5c",
+    },
+  },
   { label: "持国天王", key: "chiguotianwang" },
   { label: "多闻天王", key: "duowentianwang" },
-  { label: "石敢当", key: "shigandang" },
-  { label: "黄眉大王", key: "huangmeidawang" },
+  {
+    label: "石敢当",
+    key: "shigandang",
+    info: {
+      img: "https://picx.zhimg.com/80/v2-171f5b3f67e794f11fa18ba25dab9713_720w.webp?source=1940ef5c",
+    },
+  },
+  {
+    label: "黄眉大王",
+    key: "huangmeidawang",
+    info: {
+      img: "https://picx.zhimg.com/80/v2-171f5b3f67e794f11fa18ba25dab9713_720w.webp?source=1940ef5c",
+    },
+  },
 ];
 
 /** 头目数据 */
@@ -61,7 +91,13 @@ export const RINGLEADER_DATA: MonsterData[] = [
       img: "https://imgsa.baidu.com/forum/pic/item/8c651e305c6034a83f77b2b08d1349540923762f.jpg",
     },
   },
-  { label: "耳听怒", key: "ertingnu" },
+  {
+    label: "耳听怒",
+    key: "ertingnu",
+    info: {
+      img: "https://pic1.zhimg.com/80/v2-6566f607c3e04f84ac27b677406d0eb5_720w.webp?source=1940ef5c",
+    },
+  },
   {
     label: "眼看喜",
     key: "yankanxi",
@@ -76,12 +112,30 @@ export const RINGLEADER_DATA: MonsterData[] = [
       img: "https://imgsa.baidu.com/forum/pic/item/685e701a0ef41bd50bf7eec517da81cb39db3d18.jpg",
     },
   },
-  { label: "舌尝思", key: "shechangsi" },
+  {
+    label: "舌尝思",
+    key: "shechangsi",
+    info: {
+      img: "https://picx.zhimg.com/80/v2-171f5b3f67e794f11fa18ba25dab9713_720w.webp?source=1940ef5c",
+    },
+  },
   { label: "意见欲", key: "yijianyu" },
   { label: "鼻嗅爱", key: "bixiuai" },
-  { label: "无影手", key: "wuyingshou" },
+  {
+    label: "无影手",
+    key: "wuyingshou",
+    info: {
+      img: "https://picx.zhimg.com/80/v2-a5107d6f1ad1d22ddbc9f509f4c1cde1_720w.webp?source=1940ef5c",
+    },
+  },
   { label: "靡道人", key: "midaoren" },
-  { label: "僧面", key: "sengmian" },
+  {
+    label: "僧面",
+    key: "sengmian",
+    info: {
+      img: "https://picx.zhimg.com/80/v2-3e5a6eebadfe6e9a3c6a154638a300b0_720w.webp?source=1940ef5c",
+    },
+  },
   { label: "巨灵神", key: "julingshen" },
   { label: "百足虫", key: "baizuchong" },
   {
@@ -108,7 +162,13 @@ export const RINGLEADER_DATA: MonsterData[] = [
   },
   { label: "犰狳精", key: "qiuyujing" },
   { label: "石母", key: "shimu" },
-  { label: "武僧", key: "wuseng" },
+  {
+    label: "武僧",
+    key: "wuseng",
+    info: {
+      img: "https://pica.zhimg.com/80/v2-191ecb42678106dc0c309aeb61bf8502_720w.webp?source=1940ef5c",
+    },
+  },
 ];
 
 /** 小妖数据 */
@@ -316,11 +376,35 @@ export const GOBLIN_DATA: MonsterData[] = [
   },
   { label: "鬼侍卫", key: "guishiwei" },
   { label: "犀将军", key: "xijiangjun" },
-  { label: "犀牛", key: "xiniu" },
-  { label: "天兵甲", key: "tianbing1" },
-  { label: "天兵乙", key: "tianbing2" },
+  {
+    label: "犀牛",
+    key: "xiniu",
+    info: {
+      img: "https://picx.zhimg.com/80/v2-171f5b3f67e794f11fa18ba25dab9713_720w.webp?source=1940ef5c",
+    },
+  },
+  {
+    label: "天兵甲",
+    key: "tianbing1",
+    info: {
+      img: "https://picx.zhimg.com/80/v2-42b6f7a8eee7a62e717c3dc118826845_720w.webp?source=1940ef5c",
+    },
+  },
+  {
+    label: "天兵乙",
+    key: "tianbing2",
+    info: {
+      img: "https://picx.zhimg.com/80/v2-ae764e03db3a1413cb3449990051373d_720w.webp?source=1940ef5c",
+    },
+  },
   { label: "天将", key: "tianjiang" },
-  { label: "怪鸟", key: "guainiao" },
+  {
+    label: "怪鸟",
+    key: "guainiao",
+    info: {
+      img: "https://pic1.zhimg.com/80/v2-6566f607c3e04f84ac27b677406d0eb5_720w.webp?source=1940ef5c",
+    },
+  },
   {
     label: "村民",
     key: "cunmin",
@@ -342,7 +426,13 @@ export const GOBLIN_DATA: MonsterData[] = [
       img: "https://imgsa.baidu.com/forum/pic/item/7667c0d1f703918f532e37fb173d269758eec4c2.jpg",
     },
   },
-  { label: "沙岭海", key: "shalinghai" },
+  {
+    label: "沙岭海",
+    key: "shalinghai",
+    info: {
+      img: "https://picx.zhimg.com/80/v2-3e5a6eebadfe6e9a3c6a154638a300b0_720w.webp?source=1940ef5c",
+    },
+  },
   {
     label: "硕鼠",
     key: "shuoshu",
@@ -408,7 +498,13 @@ export const GOBLIN_DATA: MonsterData[] = [
     },
   },
   { label: "小菌君", key: "xiaojunjun" },
-  { label: "蜘蛛精", key: "zhizhujing" },
+  {
+    label: "蜘蛛精",
+    key: "zhizhujing",
+    info: {
+      img: "https://picx.zhimg.com/80/v2-7975d5479ccc14ecad3aac5b0b7f7d9b_720w.webp?source=1940ef5c",
+    },
+  },
   { label: "黄花怪甲", key: "huanghuaguai1" },
   { label: "黄花怪乙", key: "huanghuaguai2" },
   { label: "蜥蜴怪甲", key: "xiyiguai1" },
@@ -421,7 +517,20 @@ export const GOBLIN_DATA: MonsterData[] = [
   { label: "扇子怪", key: "shanziguai" },
   { label: "青狮精", key: "qingshijing" },
   { label: "龙王", key: "longwang" },
-  { label: "青色巨人", key: "qingsejuren" },
+  {
+    label: "小怪",
+    key: "xiaoguai",
+    info: {
+      img: "https://picx.zhimg.com/80/v2-22299efd79ebe197d817c3c2c8fcfcb8_720w.webp?source=1940ef5c",
+    },
+  },
+  {
+    label: "青色巨人",
+    key: "qingsejuren",
+    info: {
+      img: "https://picx.zhimg.com/80/v2-ae764e03db3a1413cb3449990051373d_720w.webp?source=1940ef5c",
+    },
+  },
   { label: "蛇巡司", key: "shexunsi" },
   { label: "甲虫怪", key: "jiachongguai" },
 ];
