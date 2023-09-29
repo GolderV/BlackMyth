@@ -18,7 +18,7 @@ export const GamePage: FC = () => {
   const [clickCount, setClickCount] = useState(0);
 
   useEffect(() => {
-    ReactGA.send({ hitType: "pageview", page: "/team", title: "team" });
+    ReactGA.send({ hitType: "pageview", page: "/game", title: "game" });
   }, []);
 
   useEffect(() => {
