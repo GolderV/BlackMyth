@@ -20,7 +20,7 @@ export const HERBS_DATA: MaterialData[] = [
     level: MaterialLevelEnum.Top,
     hold: 1,
     inStorage: 0,
-    effect: "瞬间补充法力值",
+    effect: "瞬间叠满棍势",
     comments: "上好的块茎，温暖而有活力，补气良品",
   },
   {
